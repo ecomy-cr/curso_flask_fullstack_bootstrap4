@@ -1,0 +1,42 @@
+Se inicia proyecto con Flask Python FullStack con MYSQL en db
+
+primero instalar el motor de base de datos mysql
+luego configurarlo y guardar el usuario y la contraseña
+
+una vez dentro ya sea por workbench o por MyPhpAdmin Xampp
+
+Creamos la base de datos 
+Creamos las tablas de este proyecto #contactos#
+
+codigo en mysql
+
+create database ecomycr;
+use ecomycr;
+CREATE TABLE contacts(
+  id INTEGER PRIMARY KEY AUTO_INCREMENT,
+  fullname VARCHAR(255),
+  phone VARCHAR(255),
+  email VARCHAR(255) NOT NULL UNIQUE
+);
+
+
+paso 2
+
+creamos la variable de entorno para seguridad de nuestras contraseñas
+
+.env 
+
+
+paso 3 
+
+creamos el entorno virtual para trabajar aparte 
+
+pip install virtualenv
+virtualenv env
+
+e instalamos requeriments.txt luego de estar en el entorno virtual creado 
+
+pip install -r requeriments.txt
+
+mysql-connector-python  esta libreria la instalo para mirar la db mysql manual con python 
+
